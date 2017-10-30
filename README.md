@@ -2,8 +2,6 @@
 
 [![Latest NPM release][npm-badge]][npm-badge-url]
 [![TravisCI Build Status][travis-badge]][travis-badge-url]
-[![CircleCI Build Status][circle-badge]][circle-badge-url]
-[![Test Coverage][coveralls-badge]][coveralls-badge-url]
 [![Code Climate][codeclimate-badge]][codeclimate-badge-url]
 [![Ember Observer Score][ember-observer-badge]][ember-observer-badge-url]
 [![Dependencies][dependencies-badge]][dependencies-badge-url]
@@ -66,12 +64,8 @@ Please open issues to discuss further improvement of this add on. Corresponding 
 [npm-badge-url]: https://www.npmjs.com/package/ember-resize-text
 [travis-badge]: https://img.shields.io/travis/st-h/ember-resize-text/master.svg?label=TravisCI
 [travis-badge-url]: https://travis-ci.org/st-h/ember-resize-text
-[circle-badge]: https://circleci.com/gh/st-h/ember-resize-text/tree/master.svg?style=svg&circle-token={{CIRCLE_TOKEN}}
-[circle-badge-url]: https://circleci.com/gh/st-h/ember-resize-text/tree/master
-[coveralls-badge]: https://coveralls.io/repos/github/st-h/ember-resize-text/badge.svg?branch=master
-[coveralls-badge-url]: https://coveralls.io/github/st-h/ember-resize-text?branch=master
-[codeclimate-badge]: https://img.shields.io/codeclimate/github/st-h/ember-resize-text.svg
-[codeclimate-badge-url]: https://codeclimate.com/github/st-h/ember-resize-text
+[codeclimate-badge]: https://api.codeclimate.com/v1/badges/8688ab1cea89cb7cb918/maintainability
+[codeclimate-badge-url]: https://codeclimate.com/github/st-h/ember-resize-text/maintainability
 [ember-observer-badge]: http://emberobserver.com/badges/ember-resize-text.svg
 [ember-observer-badge-url]: http://emberobserver.com/addons/ember-resize-text
 [dependencies-badge]: https://img.shields.io/david/st-h/ember-resize-text.svg
