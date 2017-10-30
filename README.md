@@ -9,23 +9,6 @@
 [![Dependencies][dependencies-badge]][dependencies-badge-url]
 [![Dev Dependencies][devDependencies-badge]][devDependencies-badge-url]
 
-[npm-badge]: https://img.shields.io/npm/v/{{REPO_NAME}}.svg
-[npm-badge-url]: https://www.npmjs.com/package/{{REPO_NAME}}
-[travis-badge]: https://img.shields.io/travis/{{USER_NAME}}/{{REPO_NAME}}/master.svg?label=TravisCI
-[travis-badge-url]: https://travis-ci.org/{{USER_NAME}}/{{REPO_NAME}}
-[circle-badge]: https://circleci.com/gh/{{USER_NAME}}/{{REPO_NAME}}/tree/master.svg?style=svg&circle-token={{CIRCLE_TOKEN}}
-[circle-badge-url]: https://circleci.com/gh/{{USER_NAME}}/{{REPO_NAME}}/tree/master
-[coveralls-badge]: https://coveralls.io/repos/github/{{USER_NAME}}/{{REPO_NAME}}/badge.svg?branch=master
-[coveralls-badge-url]: https://coveralls.io/github/{{USER_NAME}}/{{REPO_NAME}}?branch=master
-[codeclimate-badge]: https://img.shields.io/codeclimate/github/{{USER_NAME}}/{{REPO_NAME}}.svg
-[codeclimate-badge-url]: https://codeclimate.com/github/{{USER_NAME}}/{{REPO_NAME}}
-[ember-observer-badge]: http://emberobserver.com/badges/{{REPO_NAME}}.svg
-[ember-observer-badge-url]: http://emberobserver.com/addons/{{REPO_NAME}}
-[dependencies-badge]: https://img.shields.io/david/{{USER_NAME}}/{{REPO_NAME}}.svg
-[dependencies-badge-url]: https://david-dm.org/{{USER_NAME}}/{{REPO_NAME}}
-[devDependencies-badge]: https://img.shields.io/david/dev/{{USER_NAME}}/{{REPO_NAME}}.svg
-[devDependencies-badge-url]: https://david-dm.org/{{USER_NAME}}/{{REPO_NAME}}#info=devDependencies
-
 ember addon that makes use of [ember-text-measurer](https://github.com/cibernox/ember-text-measurer) to efficiently resize the font of a single line of text to make it fit within its bounds.
 
 ## Installation
@@ -78,3 +61,20 @@ The size of the font will not be increased if the element with `resize-text` cla
 ## Contribute
 
 Please open issues to discuss further improvement of this add on. Corresponding PRs are very welcome!
+
+[npm-badge]: https://img.shields.io/npm/v/ember-resize-text.svg
+[npm-badge-url]: https://www.npmjs.com/package/ember-resize-text
+[travis-badge]: https://img.shields.io/travis/st-h/ember-resize-text/master.svg?label=TravisCI
+[travis-badge-url]: https://travis-ci.org/st-h/ember-resize-text
+[circle-badge]: https://circleci.com/gh/st-h/ember-resize-text/tree/master.svg?style=svg&circle-token={{CIRCLE_TOKEN}}
+[circle-badge-url]: https://circleci.com/gh/st-h/ember-resize-text/tree/master
+[coveralls-badge]: https://coveralls.io/repos/github/st-h/ember-resize-text/badge.svg?branch=master
+[coveralls-badge-url]: https://coveralls.io/github/st-h/ember-resize-text?branch=master
+[codeclimate-badge]: https://img.shields.io/codeclimate/github/st-h/ember-resize-text.svg
+[codeclimate-badge-url]: https://codeclimate.com/github/st-h/ember-resize-text
+[ember-observer-badge]: http://emberobserver.com/badges/ember-resize-text.svg
+[ember-observer-badge-url]: http://emberobserver.com/addons/ember-resize-text
+[dependencies-badge]: https://img.shields.io/david/st-h/ember-resize-text.svg
+[dependencies-badge-url]: https://david-dm.org/st-h/ember-resize-text
+[devDependencies-badge]: https://img.shields.io/david/dev/st-h/ember-resize-text.svg
+[devDependencies-badge-url]: https://david-dm.org/st-h/ember-resize-text#info=devDependencies
