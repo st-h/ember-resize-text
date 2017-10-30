@@ -14,7 +14,7 @@
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/st-h/ember-resize-text",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
