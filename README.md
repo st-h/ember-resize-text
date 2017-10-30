@@ -1,10 +1,16 @@
 # ember-resize-text
 
+[![Build Status](https://travis-ci.org/st-h/ember-resize-text.svg?branch=master)](https://travis-ci.org/st-h/ember-resize-text)
+
 ember addon that makes use of [ember-text-measurer](https://github.com/cibernox/ember-text-measurer) to efficiently resize the font of a single line of text to make it fit within its bounds.
 
 ## Installation
 
 `ember install ember-resize-text`
+
+## Demo
+
+checkout out the (demo page)[https://st-h.github.io/ember-resize-text/]
 
 ## Usage
 
