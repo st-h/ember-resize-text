@@ -15,6 +15,7 @@ export default Component.extend({
   didInsertElement() {
     this._super(...arguments);
     window.addEventListener('resize', this.set('_resizeHandler', this.scaleFont.bind(this)), false);
+    this.element.style['white-space'] = 'nowrap';
     this.scaleFont();
   },
 
@@ -28,7 +29,7 @@ export default Component.extend({
     const minSize = this.get('minSize');
     const maxSize = this.get('maxSize');
     let fontSize = this.get('textMeasurer').fitTextSize(
-        this.element.innerText, this.element.clientWidth, style.fontWeight + ' 14px ' + style.fontFamily);
+        this.element.innerText, this.element.clientWidth, style.fontStyle + ' 14px ' + style.fontFamily);
     if (fontSize > maxSize) {
       fontSize = maxSize;
     }
