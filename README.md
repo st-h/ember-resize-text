@@ -12,7 +12,8 @@ Using ember-resize-text is easy. Just wrap your text within `resize-text` block-
 ```
 {{#resize-text min-font=12 max-font=20}}
   Please resize me!
-{{/resize-text}}```
+{{/resize-text}}
+```
 
 ### Notice on resizing the window
 
