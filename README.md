@@ -21,7 +21,7 @@ checkout out the [demo page](https://st-h.github.io/ember-resize-text/)
 
 Using ember-resize-text is easy. Just wrap your text within `resize-text` block-style.
 ```
-{{#resize-text min-font=12 max-font=20}}
+{{#resize-text minSize=12 maxSize=20}}
   Please resize me!
 {{/resize-text}}
 ```
@@ -53,8 +53,8 @@ The size of the font will not be increased if the element with `resize-text` cla
 
 ### Parameters
 
-- **min-font**: minimum font size in px
-- **max-font**: maximum font size in px
+- **minSize**: minimum font size in px
+- **maxSize**: maximum font size in px
 
 ## Contribute
 
