@@ -16,7 +16,7 @@ ember addon that makes use of [ember-text-measurer](https://github.com/cibernox/
 
 ## Demo
 
-check out out the [demo page](https://st-h.github.io/ember-resize-text/)
+check out the [demo page](https://st-h.github.io/ember-resize-text/)
 
 ## Usage
 
