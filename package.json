@@ -18,7 +18,8 @@
   "repository": "https://github.com/st-h/ember-resize-text",
   "scripts": {
     "build": "ember build",
-    "start": "ember server",
+    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
+    "start": "ember serve",
     "test": "ember try:each"
   },
   "dependencies": {
