@@ -1,49 +1,56 @@
-import $ from 'jquery';
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
+import { render, find, getRootElement } from '@ember/test-helpers';
 
-moduleForComponent('resize-text', 'Integration | Component | resize text', {
-  integration: true
-});
+module('Integration | Component | resize text', function(hooks) {
 
-test('render scaled font size', function(assert) {
+  setupRenderingTest(hooks);
 
-  $('#ember-testing-container').width(400);
 
-  this.render(hbs`
-    {{#resize-text}}
-      template block text
-    {{/resize-text}}
-  `);
+  test('render scaled font size', async function(assert) {
 
-  assert.equal($('.resize-text').text().trim(), 'template block text');
-  assert.equal($('.resize-text').css('font-size'), '80px');
-});
+    getRootElement().style.width = '800px';
 
-test('do not scale below minSize', function(assert) {
-  $('#ember-testing-container').width(20);
+    await render(hbs`
+      {{#resize-text}}
+        template block text
+      {{/resize-text}}
+    `);
 
-  this.set('minSize', 20);
-  this.render(hbs`
-    {{#resize-text minSize=minSize}}
-      template block text
-    {{/resize-text}}
-  `);
+    assert.dom('.resize-text').hasText('template block text');
+    assert.equal(getComputedStyle(find('.resize-text'))['font-size'], '80px');
+  });
 
-  assert.equal($('.resize-text').text().trim(), 'template block text');
-  assert.equal($('.resize-text').css('font-size'), '20px');
-});
 
-test('do not scale above maxSize', function(assert) {
-  $('#ember-testing-container').width(400);
+  test('do not scale below minSize', async function(assert) {
 
-  this.set('maxSize', 20);
-  this.render(hbs`
-    {{#resize-text maxSize=maxSize}}
-      template block text
-    {{/resize-text}}
-  `);
+    getRootElement().style.width = '20px';
 
-  assert.equal($('.resize-text').text().trim(), 'template block text');
-  assert.equal($('.resize-text').css('font-size'), '20px');
+    this.set('minSize', 20);
+    await render(hbs`
+      {{#resize-text minSize=minSize}}
+        template block text
+      {{/resize-text}}
+    `);
+
+    assert.dom('.resize-text').hasText('template block text');
+    assert.equal(getComputedStyle(find('.resize-text'))['font-size'], '20px');
+  });
+
+
+  test('do not scale above maxSize', async function(assert) {
+
+    getRootElement().style.width = '400px';
+
+    this.set('maxSize', 20);
+    await render(hbs`
+      {{#resize-text maxSize=maxSize}}
+        template block text
+      {{/resize-text}}
+    `);
+
+    assert.dom('.resize-text').hasText('template block text');
+    assert.equal(getComputedStyle(find('.resize-text'))['font-size'], '20px');
+  });
 });
