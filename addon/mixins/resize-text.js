@@ -26,7 +26,7 @@ export default Mixin.create({
     const style = getComputedStyle(this.element);
     const minSize = this.get('minSize');
     const maxSize = this.get('maxSize');
-    const container = this.get('container');
+    const container = this.get('containerElement');
     let elementWidth;
     if (container) {
       elementWidth = container.clientWidth;

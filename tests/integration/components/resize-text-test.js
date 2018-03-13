@@ -23,15 +23,15 @@ module('Integration | Component | resize text', function(hooks) {
     assert.equal(getComputedStyle(find('.resize-text'))['font-size'], '80px');
   });
 
-  test('when a container is specified, this elements width should be used to scale', async function(assert) {
+  test('when a containerElement is specified, this elements width should be used to scale', async function(assert) {
 
     const container = getRootElement();
     container.style.width = '20px';
-    this.set('container', container);
+    this.set('containerElement', container);
     getRootElement().getElementsByClassName('ember-view')[0].style.width = '200px';
 
     await render(hbs`
-      {{#resize-text container=container minSize=2}}
+      {{#resize-text containerElement=containerElement minSize=2}}
         template block text
       {{/resize-text}}
     `);

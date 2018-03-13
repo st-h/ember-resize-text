@@ -36,7 +36,7 @@ export default Component.extend(ResizeText, {
 });
 ```
 
-**Note**: the mixin makes use of `this.element.innerText` to get the text to display and `this.element.clientWidth` (unless `container` specifies a different element) to determine the available width.
+**Note**: the mixin makes use of `this.element.innerText` to get the text to display and `this.element.clientWidth` (unless `containerElement` specifies a different element) to determine the available width.
 
 ### Component
 
@@ -78,7 +78,7 @@ The size of the font will not be increased if the element with `resize-text` cla
 |-|-|-|
 |**minSize**| number | minimum font size in px |
 |**maxSize**| number | maximum font size in px |
-|**container**| element | The container parameter allows to specify an optional dom element whichs `clientWidth` property will be used to determine the available space. This is particularly useful when the dom element that should be resized is not a block element. For instance the text of a link should be resized, but should not occupy the full width unless needed.
+|**containerElement**| element | The containerElement parameter allows to specify an optional dom element whichs `clientWidth` property will be used to determine the available space. This is particularly useful when the dom element that should be resized is not a block element. For instance the text of a link should be resized, but should not occupy the full width unless needed.
 
 ## Contribute
 
