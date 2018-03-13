@@ -1,7 +1,7 @@
 {
   "name": "ember-resize-text",
-  "version": "1.0.5",
-  "description": "ember addon that makes use of ember-text-measurer to efficiently resize the font of a single line of text to make it fit within its bounds",
+  "version": "1.1.0",
+  "description": "ember addon that makes use of ember-text-measurer to efficiently resize the font of a single line of text to make it fit",
   "keywords": [
     "ember-addon",
     "resize",
