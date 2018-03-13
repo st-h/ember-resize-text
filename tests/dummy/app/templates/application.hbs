@@ -1,3 +1,15 @@
+<h1>block usage</h1>
+<pre>\{{#resize-text}}
+  Welcome to an automatically resizing ember headline...
+\{{/resize-text}}
+</pre>
+
 {{#resize-text}}
-Welcome to an automatically resizing ember headline...
+  Welcome to an automatically resizing ember headline...
 {{/resize-text}}
+
+<h2>container attribute</h2>
+<p>
+  Specifying a parent container, which is used to track the available width allows to render inline dom elements, while removing the requirement to occupy all the available width. This is particularly useful to display links that should resize, but not occupy the full width unless needed.
+</p>
+{{resizing-component}}

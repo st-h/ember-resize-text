@@ -8,7 +8,7 @@
 [![Dependencies][dependencies-badge]][dependencies-badge-url]
 [![Dev Dependencies][devDependencies-badge]][devDependencies-badge-url]
 
-ember addon that makes use of [ember-text-measurer](https://github.com/cibernox/ember-text-measurer) to efficiently resize the font of a single line of text to make it fit within its bounds.
+ember addon that makes use of [ember-text-measurer](https://github.com/cibernox/ember-text-measurer) to efficiently resize the font of a single line of text to make it fit.
 
 ## Installation
 
@@ -20,12 +20,33 @@ check out the [demo page](https://st-h.github.io/ember-resize-text/)
 
 ## Usage
 
-Using ember-resize-text is easy. Just wrap your text within `resize-text` block-style.
+Since version `1.1.0` ember-resize-text comes as a mixin to use within ember components. A component is still included for easy usage and to maintain backwards compatibility.
+
+### Mixin
+
+Just add the mixin to a component and the components font size will be adjusted automatically.
+```
+import ResizeText from 'ember-resize-text/mixins/resize-text';
+
+export default Component.extend(ResizeText, {
+
+  minSize: 12,
+  maxSize: 18
+
+});
+```
+
+**Note**: the mixin makes use of `this.element.innerText` to get the text to display and `this.element.clientWidth` (unless `containerElement` specifies a different element) to determine the available width.
+
+### Component
+
+Just wrap your text within the `resize-text` component block-style.
 ```
 {{#resize-text minSize=12 maxSize=20}}
   Please resize me!
 {{/resize-text}}
 ```
+**Note**: You can customize the component by overriding attributes like `tagName` or standard hooks.
 
 ### Notice on resizing the window
 
@@ -53,9 +74,11 @@ nav {
 The size of the font will not be increased if the element with `resize-text` class will not be able to increase its width in dependency to the parent's width. This is not built into the addon as this depends on the context in which the addon is used.
 
 ### Parameters
-
-- **minSize**: minimum font size in px
-- **maxSize**: maximum font size in px
+|Paramter|type|description
+|-|-|-|
+|**minSize**| number | minimum font size in px |
+|**maxSize**| number | maximum font size in px |
+|**containerElement**| element | The containerElement parameter allows to specify an optional dom element whichs `clientWidth` property will be used to determine the available space. This is particularly useful when the dom element that should be resized is not a block element. For instance the text of a link should be resized, but should not occupy the full width unless needed.
 
 ## Contribute
 
