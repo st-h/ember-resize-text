@@ -13,3 +13,23 @@
   Specifying a parent container, which is used to track the available width allows to render inline dom elements, while removing the requirement to occupy all the available width. This is particularly useful to display links that should resize, but not occupy the full width unless needed.
 </p>
 {{resizing-component}}
+
+<h2>only grow - never shrink</h2>
+<pre>\{{#resize-text shrink=false classNames="text-lg"}}
+  This will grow, but not shrink below the original font size.
+\{{/resize-text}}
+</pre>
+<p>If you specify that you don't want the text to ever shrink below the original font size, it can still grow to take up the available width of the container. Just be careful, because since it won't shrink, your text can get cut-off at smaller widths.</p>
+{{#resize-text shrink=false classNames="text-lg"}}
+  This text will only grow, and won't shrink smaller than the css font-size property (20px).
+{{/resize-text}}
+
+<h2>only shrink - never grow</h2>
+<pre>\{{#resize-text grow=false classNames="text-xl"}}
+  This will shrink, but not grow above the original font size.
+\{{/resize-text}}
+</pre>
+<p>If you specify that you don't want the text to ever grow below the original font size, it can still shrink as the width of the container becomes smaller.</p>
+{{#resize-text grow=false classNames="text-xl"}}
+  This text will only shrink - it will use the size of the css font-size property as the max (40px).
+{{/resize-text}}

@@ -74,11 +74,13 @@ nav {
 The size of the font will not be increased if the element with `resize-text` class will not be able to increase its width in dependency to the parent's width. This is not built into the addon as this depends on the context in which the addon is used.
 
 ### Parameters
-|Paramter|type|description
-|-|-|-|
-|**minSize**| number | minimum font size in px |
-|**maxSize**| number | maximum font size in px |
-|**containerElement**| element | The containerElement parameter allows to specify an optional dom element whichs `clientWidth` property will be used to determine the available space. This is particularly useful when the dom element that should be resized is not a block element. For instance the text of a link should be resized, but should not occupy the full width unless needed.
+|Paramter|type|default value|description
+|-|-|-|-|
+|**minSize**| number | 2 | minimum font size in px |
+|**maxSize**| number | 80 | maximum font size in px |
+|**containerElement**| element | `this.element` | The containerElement parameter allows to specify an optional dom element whichs `clientWidth` property will be used to determine the available space. This is particularly useful when the dom element that should be resized is not a block element. For instance the text of a link should be resized, but should not occupy the full width unless needed.|
+|**shrink**| boolean | true | (Optional) set to `false` if you only want to grow the text (never shrink it).|
+|**grow**| boolean | true | (Optional) set to `false` if you only want to shrink the text (never grow it).|
 
 ## Contribute
 
