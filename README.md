@@ -3,6 +3,7 @@
 [![Greenkeeper badge](https://badges.greenkeeper.io/st-h/ember-resize-text.svg)](https://greenkeeper.io/)
 [![Latest NPM release][npm-badge]][npm-badge-url]
 [![TravisCI Build Status][travis-badge]][travis-badge-url]
+[![Coverage Status](https://coveralls.io/repos/github/st-h/ember-resize-text/badge.svg?branch=master)](https://coveralls.io/github/st-h/ember-resize-text?branch=master)
 [![Code Climate][codeclimate-badge]][codeclimate-badge-url]
 [![Ember Observer Score][ember-observer-badge]][ember-observer-badge-url]
 [![Dependencies][dependencies-badge]][dependencies-badge-url]
