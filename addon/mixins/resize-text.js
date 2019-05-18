@@ -1,6 +1,18 @@
 import Mixin from '@ember/object/mixin';
 import { inject as service } from '@ember/service';
 
+let componentsToNotify = [];
+let didSetupListener = false;
+
+function setupListener() {
+  didSetupListener = true;
+  window.addEventListener('resize', () => {
+    componentsToNotify.forEach(c => {
+      c.scaleFont();
+    });
+  }, false);
+}
+
 export default Mixin.create({
 
   classNames: ['resize-text'],
@@ -11,15 +23,21 @@ export default Mixin.create({
   textMeasurer: service(),
 
   didInsertElement() {
-    this._super(...arguments);
-    window.addEventListener('resize', this.set('_resizeHandler', this.scaleFont.bind(this)), false);
+    if (!didSetupListener) {
+      setupListener();
+    }
+    componentsToNotify.push(this);
     this.element.style['white-space'] = 'nowrap';
     this.scaleFont();
   },
 
-  willDestroyElement: function() {
-    this._super(...arguments);
-    window.removeEventListener('resize', this.get('_resizeHandler'), false);
+  willDestroy() {
+    for (let i = 0; i < componentsToNotify.length; i++) {
+      if (componentsToNotify[i] === this) {
+        componentsToNotify.splice(i, 1);
+        break;
+      }
+    }
   },
 
   scaleFont() {
