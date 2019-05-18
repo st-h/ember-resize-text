@@ -83,7 +83,14 @@ The size of the font will not be increased if the element with `resize-text` cla
 
 ## Contribute
 
-Please open issues to discuss further improvement of this add on. Corresponding PRs are very welcome!
+Contributing
+------------------------------------------------------------------------------
+
+See the [Contributing](CONTRIBUTING.md) guide for details.
+
+
+License
+------------------------------------------------------------------------------
 
 [npm-badge]: https://img.shields.io/npm/v/ember-resize-text.svg
 [npm-badge-url]: https://www.npmjs.com/package/ember-resize-text
